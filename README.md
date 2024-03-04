@@ -19,3 +19,9 @@ This C++ program is designed as an ID generator for Data Structures, following s
    So, the generated ID: 02130
 
 Note: If duplicate IDs occur, the fifth digit will be incremented until a unique ID is obtained, and additional digits will be added as needed.
+
+### Known Problem
+- This calc unable to generate 6-digit-id. The program should properly reset the fifth digit to 0 and add an additional digit when it reaches 9, ensuring the creation of a 6-digit ID as needed.
+
+
+
