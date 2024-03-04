@@ -11,7 +11,7 @@ This C++ program is designed as an ID generator for Data Structures, following s
 
 ### Example:
    Driver: Sugeng Pangestu
-   - First two digits: 02
+   - Name : Sugeng Pangestu -> S-u = 19-21 = 2
    - Gender: Male (1)
    - Birthdate: 21-02-1999 (last digits sum: 1+2+9 = 12, modulus 9 = 3)
    - Initial fifth digit: 0
