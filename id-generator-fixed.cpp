@@ -6,13 +6,15 @@
 #include <ctime>
 using namespace std;
 
+// arezyh.s
+
 // GENERATOR ID STRUKTUR DATA
 string buatIDBaru(string nama, char gender, string tanggal_lahir, unordered_set<string>& duplikasiID) {
     // DIGIT DUA PERTAMA
     int digitDuaPertama = abs((tolower(nama[0]) - 'a' + 1) - (tolower(nama[nama.length() - 1]) - 'a' + 1));
 
     // DIGIT KETIGA
-    int digitKetiga = (gender == 'L') ? 1 : 0;
+    int digitKetiga = (gender == 'L') ? 1 : 0; // revisi
 
     // DIGIT KEEMPAT
     int digitKeempat = ((tanggal_lahir[1] - '0') + (tanggal_lahir[4] - '0') + (tanggal_lahir[9] - '0')) % 9;
@@ -43,15 +45,15 @@ string buatIDBaru(string nama, char gender, string tanggal_lahir, unordered_set<
 int main() {
     unordered_set<string> duplikasiID;  // Untuk melacak ID yang telah dibuat
 
-    // fungsi loop untuk memasukkan data SUGENG PANGESTU
+    // fungsi loop untuk memasukkan data Dummy sebanyak n.
     for (int i = 0; i < 21; i++) {
         // Contoh penggunaan
-        string nama = "Sugeng Pangestu";
+        string nama = "Akbar Setiyawn";
         char gender = 'L';
-        string tanggal_lahir = "21-02-1999";
+        string tanggal_lahir = "27-02-2002";
         // Panggil fungsi buatIDBaru
         string userID = buatIDBaru(nama, gender, tanggal_lahir, duplikasiID);
     }
-
+    // arezyh.s
     return 0;
 }
