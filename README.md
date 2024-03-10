@@ -24,4 +24,7 @@ Note: If duplicate IDs occur, the fifth digit will be incremented until a unique
 - This calc unable to generate 6-digit-id. The program should properly reset the fifth digit to 0 and add an additional digit when it reaches 9, ensuring the creation of a 6-digit ID as needed.
 
 
+### UPDATES
+- (10/03/2024) - KNOWN PROBLEM HAS BEEN FIXED
+
 
