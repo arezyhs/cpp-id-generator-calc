@@ -31,11 +31,11 @@ This C++ program serves as an ID generator tailored for Data Structures, impleme
    - The last digit is derived from the sum of the alphabetical order of all characters in the customer's name, with the last digit taken if the sum is more than one digit.
 
    ### Example:
-   Driver: Sugeng Pangestu
-   - License Plate: L 1996 YZ
-   - Destination: Ketintang
-   - Customer Name: Komeng
-   - Order ID: 1202130215
+   Driver: Sugeng Pangestu -> 02130
+   - License Plate: L 1996 YZ -> L = 12
+   - Destination: Ketintang -> n + g = 7 + 14 = 21
+   - Customer Name: Komeng -> sum of komeng and take the last digit of that sum = 5
+   So, the generated ID Order is 1202130215
 
 ### Known Problem
 
