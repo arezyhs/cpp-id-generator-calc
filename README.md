@@ -8,7 +8,7 @@ This C++ program serves as an ID generator tailored for Data Structures, impleme
 
 ### ID Rules:
 
-**1. ID SUPIR (Driver ID):**
+**1. ID GENERATOR FOR DRIVER:**
    - The ID consists of 5 digits.
    - The first two digits represent the absolute difference between the first and last letters of the driver's name.
    - The third digit signifies the gender of the driver (1 for male, 0 for female).
@@ -23,7 +23,7 @@ This C++ program serves as an ID generator tailored for Data Structures, impleme
    - Initial fifth digit: 0
    So, the generated ID SUPIR: 02130
 
-**2. ID Order:**
+**2. ID GENERATOR FOR DRIVER AND ORDER:**
    - The ID consists of 10 digits.
    - The first two digits represent the alphabetical order of the first character on the license plate of the taxi.
    - Digits 3 to 7 represent the driver's ID. For example, for the driver "Sugeng Pangestu," the first 7 digits would be 1216130.
