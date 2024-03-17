@@ -81,16 +81,16 @@ int main() {
     unordered_set<string> duplikasiID;  // Untuk melacak ID yang telah dibuat
 
     // UBAH DATA SUPIR DI BAWAH!!!
-    string namaSupir = "Akbar Setiyawan"; // Change the name of the driver
-    char genderSupir = 'L';
-    string tanggalLahirSupir = "27-10-2002";
+    string namaSupir = "Akbar Setiyawan"; // ubah nama supir di sini
+    char genderSupir = 'L'; // ubah gender supir 'L' atau 'P' di sini
+    string tanggalLahirSupir = "27-10-2002"; // ubah tanggalLahirSupir dengan formad DD-MM-YYYY di sini.
     string userID = buatIDBaru(namaSupir, genderSupir, tanggalLahirSupir, duplikasiID);
 
     // UBAH DATA PELANGGAN DI BAWAH
-    string platNomor = "AE"; // L 1996 YZ
-    string idSupir = userID; // scrap dari ID SUPIR
-    string tujuan = "Ketintang";
-    string namaPelanggan = "Komeng";
+    string platNomor = "AE"; // ubah plat nomor di sini
+    string idSupir = userID;
+    string tujuan = "Ketintang"; // ubah tujuan di sini
+    string namaPelanggan = "Komeng"; // ubah nama pelanggan di sini
     // arezyh.s
     string orderID = buatIDOrder(platNomor, idSupir, tujuan, namaPelanggan);
     cout << "ID Order   : " << orderID << endl;
