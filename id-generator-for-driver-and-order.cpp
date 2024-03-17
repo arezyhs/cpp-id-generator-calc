@@ -41,9 +41,11 @@ string buatIDBaru(string nama, char gender, string tanggal_lahir, unordered_set<
 }
 
 // generator ID untuk order supir.
-string buatIDOrder(char platNomor, string idSupir, string tujuan, string namaPelanggan) {
-    int digitOrderDuaPertama = tolower(platNomor) - 'a' + 1;
-    int digitIDSupir = stoi(idSupir) ;
+string buatIDOrder(string platNomor, string idSupir, string tujuan, string namaPelanggan) {
+    // Mengonversi karakter pertama plat nomor menjadi dua digit
+    int digitPlatNomor = (tolower(platNomor[0]) - 'a' + 1);
+    string digitPlatNomorStr = (digitPlatNomor < 10) ? "0" + to_string(digitPlatNomor) : to_string(digitPlatNomor);
+    int digitIDSupir = stoi(idSupir);
     int digitTujuan = 0;
 
     if (tujuan.length() >= 2) {
@@ -54,7 +56,7 @@ string buatIDOrder(char platNomor, string idSupir, string tujuan, string namaPel
         cerr << "Error: MINIMAL HARUS 2 CHAR PADA DESTINASI TUJUAN!" << endl; // buat test
         exit(EXIT_FAILURE);
     }
-    // arezyh.s
+
     int jumlahHurufNama = 0;
     for (char huruf : namaPelanggan) {
         if (isalpha(huruf)) {
@@ -65,13 +67,14 @@ string buatIDOrder(char platNomor, string idSupir, string tujuan, string namaPel
     int digitTerakhir = jumlahHurufNama % 10;
 
     // format order ID menjadi 10 digit.
-    return to_string(digitOrderDuaPertama) +
+    return digitPlatNomorStr +
            // Pad digitIDSupir with leading zeros to make it a 5-digit number
            to_string(digitIDSupir / 10000) +
            to_string(digitIDSupir % 10000) +
            to_string(digitTujuan) +
            to_string(digitTerakhir);
 }
+
 
 // TEST DATA SUPIR DAN PELANGGAN DI SINI!!!!!!! UBAH DATANYA SENDIRI!!!!
 int main() {
@@ -84,7 +87,7 @@ int main() {
     string userID = buatIDBaru(namaSupir, genderSupir, tanggalLahirSupir, duplikasiID);
 
     // UBAH DATA PELANGGAN DI BAWAH
-    char platNomor = 'L'; // L 1996 YZ
+    string platNomor = "AE"; // L 1996 YZ
     string idSupir = userID; // scrap dari ID SUPIR
     string tujuan = "Ketintang";
     string namaPelanggan = "Komeng";
