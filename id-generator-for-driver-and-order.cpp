@@ -34,7 +34,7 @@ string generatorIDSupir(string nama, char gender, string tanggal_lahir, unordere
     } while (duplikasiID.find(IDSupir) != duplikasiID.end());
 // arezyh.s
     duplikasiID.insert(IDSupir);
-    cout << "ID Supir   : " << IDSupir << endl;
+    
     return IDSupir;
 }
 
@@ -53,7 +53,7 @@ string generatorIDOrder(string platNomor, string idSupir, string tujuan, string 
         char lastChar1 = tolower(tujuan[tujuan.length() - 2]);
         char lastChar2 = tolower(tujuan[tujuan.length() - 1]);
         digitTujuan = (lastChar1 - 'a' + 1) + (lastChar2 - 'a' + 1);
-    } else { // kalau <2 programnya mokad, misal cuma masukin 'A' doang atau 'Z' doang.
+    } else { // kalau <2 PROGRAMNYA MOKAD, misal cuma masukin 'A' doang atau 'Z' doang.
         // ini gak usah dicopas juga ya!
         // daripada dibuat gini, mending ketika user masukin tujuan, dibuat perulangan aja sampe si user masukin minimal 2 huruf
         // atau tambahin nol di awal jika <10.
@@ -72,7 +72,7 @@ string generatorIDOrder(string platNomor, string idSupir, string tujuan, string 
     // gabungin semuanya menjadi 10 digit ID order.
     return digitPlatNomorStr +
            digitIDSupirStr +
-           to_string(digitTujuan) +
+           (digitTujuan < 10 ? "0" + to_string(digitTujuan) : to_string(digitTujuan)) + // kalau hasil penjumlahannya <10, tambahin nol di awal!
            to_string(digitTerakhir);
 }
 
@@ -91,7 +91,7 @@ int main() {
     // UBAH DATA PELANGGAN DI BAWAH
     string platNomor = "AE"; // ubah plat nomor di sini
     string idSupir = IDSupir; //ambil dari IDSupir langsung
-    string tujuan = "Ketintang"; // ubah tujuan di sini
+    string tujuan = "Surabayaab"; // ubah tujuan di sini
     string namaPelanggan = "Komeng"; // ubah nama pelanggan di sini
     // arezyh.s
     string orderID = generatorIDOrder(platNomor, idSupir, tujuan, namaPelanggan);
