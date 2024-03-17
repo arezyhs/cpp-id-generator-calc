@@ -44,9 +44,9 @@ string generatorIDOrder(string platNomor, string idSupir, string tujuan, string 
     // mendapatkan nilai dari karakter pertama platNomor!
     int digitPlatNomor = (tolower(platNomor[0]) - 'a' + 1); // untuk digit 1 dan 2
     // kalau nilai karakternya <10, tambahin nol. Misal A = 1, jadinya 01.
-    string digitPlatNomorStr = (digitPlatNomor < 10) ? "0" + to_string(digitPlatNomor) : to_string(digitPlatNomor); // untuk digit ke 3 4 5 6 7
+    string digitPlatNomorStr = (digitPlatNomor < 10) ? "0" + to_string(digitPlatNomor) : to_string(digitPlatNomor);
     // mendapatkan ID supir. klasik...
-    string digitIDSupirStr = (idSupir.length() < 5) ? string(5 - idSupir.length(), '0') + idSupir : idSupir;
+    string digitIDSupirStr = (idSupir.length() < 5) ? string(5 - idSupir.length(), '0') + idSupir : idSupir; // untuk digit ke 3 4 5 6 7
 
     int digitTujuan = 0; // digit 8 9
     if (tujuan.length() >= 2) {
