@@ -38,6 +38,8 @@ string generatorIDSupir(string nama, char gender, string tanggal_lahir, unordere
     return IDSupir;
 }
 
+/* KALAU COPAS, HAPUS KOMENTAR E, UBAH VARIABEL E MENYESUAIKAN KODINGANMU */
+
 // generator ID untuk order supir.
 string generatorIDOrder(string platNomor, string idSupir, string tujuan, string namaPelanggan) {
     // mendapatkan nilai dari karakter pertama platNomor!
